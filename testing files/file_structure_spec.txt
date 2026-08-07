@@ -1,0 +1,58 @@
+================================================================================
+FOCUSRITE LIQUID CHANNEL EMULATION FILE BINARY SPEC & CONFIGURATION VIEW
+================================================================================
+
+File Extension  : .lqm (Preamps) / .lqc (Compressors)
+Total File Size : 33,280 bytes (0x8200)
+
+--------------------------------------------------------------------------------
+1. GLOBAL FILE HEADER (0x0000 - 0x01FF | 512 Bytes)
+--------------------------------------------------------------------------------
+[0x0000 - 0x0003] File_ID            : 4-byte uint32-LE per-file identifier (e.g. 0xBADD7B68)
+[0x0004 - 0x0007] Reserved_Header_1  : 0x00000000
+[0x0008 - 0x000B] Data_Start_Offset  : 0x00000200 (512 bytes)
+[0x000C - 0x006B] Format_Magic       : "Liquid Channel (tm) file format (c) Sintefex Audio Lda and Focusrite Audio Engineering Ltd"
+[0x006C - 0x008B] Reserved_Header_2  : 0x00000000 (32 bytes)
+[0x008C - 0x008F] Payload_Offset     : 0x00000200 (512 bytes)
+[0x0090 - 0x0093] Payload_Size       : 0x00008000 (32,768 bytes total payload)
+[0x0094 - 0x01FF] Reserved_Padding   : 0x00000000 (364 bytes padding)
+
+--------------------------------------------------------------------------------
+2. BLOCK A - STANDARD SAMPLE RATE PROFILE (44.1 kHz / 48 kHz | 16,384 Bytes)
+--------------------------------------------------------------------------------
+[0x0200 - 0x0203] Block_A_Header_ID  : 4-byte uint32-LE header field (e.g. 0x2111135A)
+[0x0204 - 0x0207] Emulation_Type_Tag : 0xFFFFFDFF = Preamp (.lqm) / 0xFDFFFFFF = Compressor (.lqc)
+
+[0x0208 - 0x0213] DISPLAY_NAME_A     : Display Name for 44.1k/48k Session Mode
+                                     - Length   : 12 Bytes Max (Printable ASCII 0x20 - 0x7E)
+                                     - Encoding : Each byte XOR'd with 0xFF
+                                     - Padding  : Space (0x20 ^ 0xFF = 0xDF)
+
+[0x0214 - 0x03DB] DSP_Parameters_A   : Filter coefficients & gain staging params (456 bytes)
+[0x03DC - 0x03FC] Description_A      : Extended description field (32 Bytes, XOR 0xFF, padded 0xDF)
+[0x03FC - 0x41FF] Convolution_Data_A : 44.1k/48k Dynamic Convolution impulse tables (15,876 bytes)
+
+--------------------------------------------------------------------------------
+3. BLOCK B - HIGH SAMPLE RATE PROFILE (88.2 kHz / 96 kHz | 16,384 Bytes)
+--------------------------------------------------------------------------------
+[0x4200 - 0x4203] Block_B_Header_ID  : 4-byte uint32-LE Block B header field
+[0x4204 - 0x4207] Emulation_Type_Tag : 0xFFFFFDFF = Preamp (.lqm) / 0xFDFFFFFF = Compressor (.lqc)
+
+[0x4208 - 0x4213] DISPLAY_NAME_B     : Display Name for 88.2k/96k Session Mode
+                                     - MUST MATCH DISPLAY_NAME_A (0x0208)
+
+[0x4214 - 0x43DB] DSP_Parameters_B   : High sample rate DSP parameters (456 bytes)
+[0x43DC - 0x43FC] Description_B      : High sample rate Description field (32 Bytes)
+[0x43FD - 0x81FF] Convolution_Data_B : 88.2k/96k Dynamic Convolution impulse tables (15,876 bytes)
+
+--------------------------------------------------------------------------------
+4. STRUCTURED CONFIGURATION EXAMPLE (HUMAN-READABLE)
+--------------------------------------------------------------------------------
+[Emulation]
+FileType        = Preamp (.lqm)
+FileID          = 0xBADD7B68
+DisplayName_A   = "NEVE 1073"       # Offset 0x0208 (12 chars max, XOR 0xFF)
+DisplayName_B   = "NEVE 1073"       # Offset 0x4208 (12 chars max, XOR 0xFF)
+Description_A   = "NEVE 1073 MIC PREAMP"  # Offset 0x03DC (32 chars max, XOR 0xFF)
+Description_B   = "NEVE 1073 MIC PREAMP"  # Offset 0x43DC (32 chars max, XOR 0xFF)
+================================================================================
