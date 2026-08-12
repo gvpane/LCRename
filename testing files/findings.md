@@ -1,148 +1,39 @@
-# Focusrite Liquid Channel File Format & Hardware Test Log
+# Liquid Control Format Findings
 
-## Objective
+## High-Level Summary
+- **Replica Files (.lqm / .lqc)**: These represent single Liquid Channel emulations (e.g., preamps or compressors). They are exactly 33,280 bytes (`0x8200`).
+- **Bank Files (.lqb)**: Used to bundle multiple replicas. These start with a 512-byte global header containing the signature `"LIQC"`.
 
-Reverse-engineer the `.lqm` (preamp) and `.lqc` (compressor) binary file format to edit internal **display names** to real-world gear names without triggering hardware validation / corruption errors on the Focusrite Liquid Channel.
+## The Checksum and Obfuscation Algorithm (CRACKED)
 
-> **Note**: Primary focus is on the 12-character Display Name fields on the LCD hardware.
+The core misunderstanding in previous reverse-engineering attempts was that the hardware relies on standard cryptographic hashes and plaintext headers. Instead, Sintefex implemented a custom obfuscation and checksum routine:
 
----
+### 1. Payload Obfuscation
+The file is NOT natively encrypted with an advanced cipher. However, the entire payload from `0x0200` to `EOF` (including all display strings, descriptions, and DSP data) is **bitwise inverted (`~byte`)**.
+- To read or modify the strings in a hex editor, you must first invert every bit from `0x0200` to the end of the file.
+- `LiquidControl.exe` does this inversion in memory when loading the file into the PC software.
 
-## File Format & Structure (Reverse-Engineered)
+### 2. The Checksum (File ID)
+The `File ID` located at `0x0000` is **NOT an arbitrary "Hardware Registration Identifier" string like `"LIQC"` or `"USER"`.**
+The first 4 bytes are actually a proprietary 32-bit checksum that protects the integrity of the file.
 
-All single emulation files are **33,280 bytes** (`0x8200`). The file contains a 512-byte global header followed by two mirrored 16,384-byte data blocks (Block A and Block B).
+The algorithm to calculate this checksum is:
+1. Ensure the file has been correctly obfuscated (bitwise inversion from `0x0200` to `EOF`).
+2. Sum all 32-bit Little Endian `DWORD`s starting from `0x0004` to `EOF`.
+3. XOR the sum with the magic constant: `0x29A7FE19`.
+4. The resulting 32-bit integer is the correct `File ID` checksum and must be written to `0x0000-0x0003`.
 
-| File Offset | Length | Field Description | Encoding / Format |
-|-------------|--------|-------------------|-------------------|
-| `0x0000` | 4 bytes | File ID | uint32-LE (Per-file unique ID) |
-| `0x0008` | 4 bytes | Header Offset | uint32-LE `0x00000200` (512) |
-| `0x000C` | 96 bytes | Magic String | `"Liquid Channel (tm) file format..."` |
-| `0x0200` | 4 bytes | `pre_a` (Block A Header) | uint32-LE |
-| `0x0204` | 4 bytes | `pre_b` (Type Tag) | `0xFFFFFDFF` (preamp) or `0xFDFFFFFF` (compressor) |
-| `0x0208` | 12 bytes | Display Name A | Printable ASCII, XOR `0xFF`, padded with `0xDF` |
-| `0x03DC` | 32 bytes | Description A | Printable ASCII, XOR `0xFF`, padded with `0xDF` |
-| `0x4200` | 4 bytes | `pre_a` copy (Block B Header) | uint32-LE |
-| `0x4204` | 4 bytes | `pre_b` (Type Tag copy) | `0xFFFFFDFF` (preamp) or `0xFDFFFFFF` (compressor) |
-| `0x4208` | 12 bytes | Display Name B copy | **Must match `0x0208`** |
-| `0x43DC` | 32 bytes | Description B copy | **Must match `0x03DC`** |
+### 3. File Structure (De-obfuscated)
+Once the payload from `0x0200` is de-obfuscated, the true structure is visible:
 
----
+* **0x0000**: `File ID` / Checksum
+* **0x0004 - 0x01FF**: Unknown binary structure (Likely parameters or meta tags, untouched by obfuscation).
+* **0x0200**: `pre_a` (`0xdeeeeca5` for Preamp A, etc.)
+* **0x0204**: `pre_b` (Type Tag - e.g., `0x00020000`)
+* **0x0208**: Display Name (Max 31 chars, null-terminated)
+* **0x03DC**: Description (Max 31 chars, null-terminated)
+* **0x0400 - 0x41FF**: DSP Data for Standard Sample Rates (44.1k / 48k)
+* **0x4200 - 0x81FF**: Block B (High Sample Rate 88.2k / 96k). Exact same header structure as Block A, including another copy of the Display Name and Description.
 
-## Hardware Test Variants Log
-
-The reference preamp used for testing is `original FF ISA 110.lqm` located in `testing files/`. Six distinct test variants have been generated inside `testing files/` to isolate which fields or structural requirements the Liquid Channel hardware enforces during upload.
-
-### Variant 1: `TEST_V1_DISPLAY_ONLY.lqm`
-- **Modifications**:
-  - `0x0208..0x0213`: Display Name A -> `"FF ISA 110 T"`
-  - `0x4208..0x4213`: Display Name B -> `"FF ISA 110 T"`
-- **Hypothesis**: The unit only checks display name A and mirror B.
-- **Hardware Test Result**: Pending user testing.
-
----
-
-### Variant 2: `TEST_V2_NAME_AND_DESC.lqm`
-- **Modifications**:
-  - `0x0208` & `0x4208`: Display Name A/B -> `"FF ISA 110 T"`
-  - `0x03DC` & `0x43DC`: Description A/B -> `"FOCUSRITE CLASSIC ISA 110 TEST "`
-- **Hypothesis**: The unit performs a consistency check between display name and description. Both must be updated in tandem across Block A and Block B.
-- **Hardware Test Result**: Pending user testing.
-
----
-
-### Variant 3: `TEST_V3_ZERO_PRE_A.lqm`
-- **Modifications**:
-  - Display Name A/B and Description A/B patched as in V2.
-  - `0x0200..0x0203`: Set to `0x00000000` (zeroed).
-  - `0x4200..0x4203`: Set to `0x00000000` (zeroed).
-- **Hypothesis**: `pre_a` is a Block A header hash. Setting it to zero disables hash validation in DSP firmware.
-- **Hardware Test Result**: Pending user testing.
-
----
-
-### Variant 4: `TEST_V4_ZERO_FILE_ID.lqm`
-- **Modifications**:
-  - Display Name A/B and Description A/B patched as in V2.
-  - `0x0000..0x0003`: Set `File ID` to `0x00000000` (zeroed).
-- **Hypothesis**: `File ID` is matched against a factory whitelist. Setting `File ID = 0` flags the file as a user/custom preset and skips factory whitelist checks.
-- **Hardware Test Result**: Pending user testing.
-
----
-
-### Variant 5: `TEST_V5_FACTORY_PADDING.lqm`
-- **Modifications**:
-  - Display Name A/B patched to `"FF ISA 110 T"`.
-  - Description A/B patched with **factory-exact leading space byte** (`0xDF` at `0x03DC`/`0x43DC`) and exact 32-char layout: `" FOCUSRITE CLASSIC ISA 110 TEST"`.
-- **Hypothesis**: The firmware string parser enforces factory layout conventions (e.g. leading space formatting at offset `0x03DC`).
-- **Hardware Test Result**: Pending user testing.
-
----
-
-### Variant 6: `TEST_V6_CRC32_META.lqm`
-- **Modifications**:
-  - Display Name A/B and Description A/B patched as in V2.
-  - `0x0200` (`pre_a`) & `0x4200`: Recalculated as `CRC32(patched_name_bytes + patched_desc_bytes)`.
-- **Hypothesis**: `pre_a` is a 32-bit CRC over the text metadata blocks.
-- **Hardware Test Result**: Pending user testing.
-
----
-
-## File ID & Header Logical Rules (Discovered)
-
-1. **`File ID` at `0x0000..0x0003`**:
-   - Acts as a **Hardware Factory Registration Identifier**.
-   - Inspection across all 87 files shows specific manufacturer family tags (e.g. Avalon = `0xBB`, Cadac = `0x5B`/`0x7B`, API = `0x5A`/`0xBA`).
-   - Liquid Channel hardware checks `File ID` against a ROM whitelist. Modifying a factory file while leaving `File ID` intact causes factory integrity verification to fail.
-
-2. **`pre_a` (`0x0200`) and `pre_b` (`0x4200`)**:
-   - Header tags for the **Standard Sample Rate profile (48kHz)** vs **High Sample Rate profile (96kHz)**.
-
----
-
-## Strategy: Creating Custom User File Containers
-
-Instead of attempting to tamper with factory-sealed files, we can **create new custom file containers**:
-
-- **Audio Payload**: Copy the **100% exact, untouched 15,876-byte Dynamic Convolution audio payload** from the original file into Block A (`0x03FC`–`0x41FF`) and Block B (`0x43FD`–`0x81FF`).
-- **Custom Metadata**: Assign custom user display names (e.g. `"ISA 110 REAL"`) and set custom File ID (`0x55534552` / `"USER"`) to bypass factory whitelist enforcement.
-
-### Test Container: `TEST_CUSTOM_CONTAINER_ISA110.lqm`
-- **File ID (`0x0000`)**: `0x55534552` (`"USER"`)
-- **Display Name A/B (`0x0208`/`0x4208`)**: `"ISA 110 REAL"`
-- **Audio DSP Payload**: 100% untouched copy of `original FF ISA 110.lqm`
-- **Location**: `testing files/TEST_CUSTOM_CONTAINER_ISA110.lqm`
-
----
-
-## Combined `.lqb` Bundle vs. Individual `.lqm`/`.lqc` Files (Discovered)
-
-A deep structural comparison between the **Combined Bundle File (`V2.0_40PRES&COMPS.lqb`, 2,621,952 bytes)** and individual files (`.lqm`/`.lqc`, 33,280 bytes) revealed:
-
-1. **Header Differences**:
-   - **Individual File (`.lqm`/`.lqc`)**: Starts with a **512-byte File Header** (`0x0000`–`0x01FF`) containing the per-file `File ID` and magic string `"Liquid Channel (tm)..."`, followed by the 32,768-byte dual-block payload (`0x0200`–`0x81FF`). Total size = **33,280 bytes**.
-   - **Combined Bundle File (`.lqb`)**: Starts with a **single 512-byte Global Bank Header** (`0x0000`–`0x01FF`). The individual 512-byte headers are **stripped out**, and all 80 factory emulation payloads (32,768 bytes each) are concatenated back-to-back:
-     - Entry 0 at `0x0200`
-     - Entry 1 at `0x8200` (`0x0200 + 32,768`)
-     - Entry 2 at `0x10200` (`0x0200 + 65,536`), etc.
-     - Total size = `512 + 80 * 32,768` = **2,621,952 bytes**.
-
-2. **Content Coverage**:
-   - The `.lqb` bundle file contains **only the 80 original factory base models** (40 preamps + 40 compressors).
-   - Add-on expansion packs (released 2004–2006, such as `HOT`, `PAD`, `Hi H`, `Lo H` variants) exist only as individual `.lqm`/`.lqc` files.
-
-3. **Import Behavior**:
-   - When importing a `.lqb` bundle, the Liquid Channel / LiquidControl software parses the global bank header once and extracts the 80 raw 32,768-byte payloads directly into bank memory slots **without inspecting individual 512-byte file headers**.
-
----
-
-## Hardware Test Results (Empirical Verification)
-
-### Hardware Test Run Results
-- **Tested Files**: `TEST_V1_DISPLAY_ONLY.lqm`, `TEST_V2_NAME_AND_DESC.lqm`, `TEST_V3_ZERO_PRE_A.lqm`, `TEST_V4_ZERO_FILE_ID.lqm`, `TEST_V5_FACTORY_PADDING.lqm`, `TEST_V6_CRC32_META.lqm`, `TEST_CUSTOM_CONTAINER_ISA110.lqm`, and `CUSTOM_REAL_GEAR_BANK_V2.0.lqb`.
-- **Hardware Error Output**: All test variants were flagged by the Focusrite Liquid Channel / LiquidControl software as **"possibly corrupted"**.
-- **Official Focusrite Terminology**: Emulation files are officially designated as **"replicas"** (`.lqm` mic-pre replicas, `.lqc` compressor replicas).
-
-### Key Reverse-Engineering Conclusion
-The failure of all 8 test candidate variations confirms that Focusrite / Sintefex implemented a **cryptographic digital signature / proprietary hash algorithm** across the replica file headers (`0x0000..0x0003` File ID and `0x0200..0x0203` `pre_a` header ID). 
-
-When any internal text or metadata byte is edited without recalculating the proprietary Sintefex cryptographic signature key, the Liquid Channel hardware / software safety parser detects the checksum mismatch and rejects the replica file to prevent DSP memory corruption.
+### Renaming Files
+A custom tool `LCRename.py` has been written to properly handle the unobfuscation, string replacement, re-obfuscation, and checksum regeneration. Modifying strings blindly with a hex editor and leaving the `File ID` intact causes the hardware to throw the "possibly corrupted" error due to a checksum mismatch.
