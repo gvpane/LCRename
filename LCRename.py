@@ -41,8 +41,10 @@ def rename_replica(in_file, out_file, new_name, new_desc=None):
     print(f"    Old Desc: {old_desc}")
     
     # 2. Modify strings
-    # The Name field is exactly 16 bytes. Bytes after 0x0217 contain critical DSP struct data!
-    name_bytes = new_name.encode('utf-8')[:15].ljust(16, b'\x00')
+    # The Name field is strictly 12 characters (space-padded), followed by 4 null bytes. 
+    # Bytes after 0x0217 contain critical DSP struct data!
+    name_str = new_name[:12].ljust(12, ' ')
+    name_bytes = name_str.encode('utf-8') + b'\x00\x00\x00\x00'
     data[0x0208:0x0208+16] = name_bytes
     if new_desc:
         desc_bytes = new_desc.encode('utf-8')[:31].ljust(32, b'\x00')
