@@ -18,7 +18,7 @@ def obfuscate(data):
 def calculate_checksum(data):
     """
     Calculates the required checksum (File ID) for a Liquid Control replica file.
-    Note: The checksum is calculated OVER THE OBFUSCATED DATA!
+    CRITICAL: The checksum MUST be calculated OVER THE UNOBFUSCATED DATA!
     """
     num_dwords = (len(data) - 4) // 4
     words = struct.unpack(f'<{num_dwords}I', data[4:4+num_dwords*4])
@@ -101,8 +101,8 @@ def main():
     parser = argparse.ArgumentParser(description="Rename Focusrite Liquid Channel Replica (.lqm/.lqc) files.")
     parser.add_argument('input', help="Input replica file")
     parser.add_argument('output', help="Output replica file")
-    parser.add_argument('-n', '--name', required=True, help="New display name (max 31 chars)")
-    parser.add_argument('-d', '--desc', help="New description (max 31 chars)")
+    parser.add_argument('-n', '--name', required=True, help="New display name (max 12 chars, space-padded)")
+    parser.add_argument('-d', '--desc', help="New description (max 32 chars, space-padded)")
     
     args = parser.parse_args()
     
