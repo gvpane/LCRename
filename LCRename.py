@@ -35,21 +35,22 @@ def rename_replica(in_file, out_file, new_name, new_desc=None):
     unobfuscate(data)
     
     # Extract existing names to show the user
-    old_name = data[0x0208:0x0228].split(b'\x00')[0].decode('utf-8', errors='ignore')
+    old_name = data[0x0208:0x0218].split(b'\x00')[0].decode('utf-8', errors='ignore')
     old_desc = data[0x03DC:0x03FC].split(b'\x00')[0].decode('utf-8', errors='ignore')
     print(f"    Old Name: {old_name}")
     print(f"    Old Desc: {old_desc}")
     
     # 2. Modify strings
-    name_bytes = new_name.encode('utf-8')[:31].ljust(32, b'\x00')
-    data[0x0208:0x0208+32] = name_bytes
+    # The Name field is exactly 16 bytes. Bytes after 0x0217 contain critical DSP struct data!
+    name_bytes = new_name.encode('utf-8')[:15].ljust(16, b'\x00')
+    data[0x0208:0x0208+16] = name_bytes
     if new_desc:
         desc_bytes = new_desc.encode('utf-8')[:31].ljust(32, b'\x00')
         data[0x03DC:0x03DC+32] = desc_bytes
         
     # Block B (High Sample Rate)
-    if len(data) >= 0x4208 + 32:
-        data[0x4208:0x4208+32] = name_bytes
+    if len(data) >= 0x4208 + 16:
+        data[0x4208:0x4208+16] = name_bytes
         if new_desc:
             data[0x43DC:0x43DC+32] = desc_bytes
             

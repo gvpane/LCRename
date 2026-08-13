@@ -30,7 +30,7 @@ Once the payload from `0x0200` is de-obfuscated, the true structure is visible:
 * **0x0004 - 0x01FF**: Unknown binary structure (Likely parameters or meta tags, untouched by obfuscation).
 * **0x0200**: `pre_a` (`0xdeeeeca5` for Preamp A, etc.)
 * **0x0204**: `pre_b` (Type Tag - e.g., `0x00020000`)
-* **0x0208**: Display Name (Max 31 chars, null-terminated)
+* **0x0208**: Display Name (Max 15 chars, null-terminated. Exactly 16 bytes long. Data immediately following `0x0217` contains critical DSP variables that will cause corruption if overwritten!)
 * **0x03DC**: Description (Max 31 chars, null-terminated)
 * **0x0400 - 0x41FF**: DSP Data for Standard Sample Rates (44.1k / 48k)
 * **0x4200 - 0x81FF**: Block B (High Sample Rate 88.2k / 96k). Exact same header structure as Block A, including another copy of the Display Name and Description.
