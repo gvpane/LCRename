@@ -81,13 +81,15 @@ def rename_replica(in_file, out_file, new_name, new_desc=None):
     if new_desc:
         print(f"    New Desc: {new_desc}")
 
-    # 4. Re-obfuscate payload
-    obfuscate(data)
-    
-    # 5. Calculate new Checksum/File ID
+    # 4. Calculate new Checksum/File ID
+    # CRITICAL: The master File ID checksum is mathematically calculated on the UNOBFUSCATED payload!
     new_checksum = calculate_checksum(data)
     
-    # 5. Overwrite the first 4 bytes (File ID)
+    # 5. Re-obfuscate payload
+    obfuscate(data)
+    
+    # 6. Overwrite the first 4 bytes (File ID)
+    # The File ID itself is never obfuscated, so we can write it after obfuscating the rest of the payload.
     data[0:4] = struct.pack('<I', new_checksum)
     
     with open(out_file, 'wb') as f:
