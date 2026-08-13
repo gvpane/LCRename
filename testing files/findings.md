@@ -37,3 +37,17 @@ Once the payload from `0x0200` is de-obfuscated, the true structure is visible:
 
 ### Renaming Files
 A custom tool `LCRename.py` has been written to properly handle the unobfuscation, string replacement, re-obfuscation, and checksum regeneration. Modifying strings blindly with a hex editor and leaving the `File ID` intact causes the hardware to throw the "possibly corrupted" error due to a checksum mismatch.
+
+## How to Successfully Modify a Replica File
+To successfully change the name or description of a replica file without causing corruption, the following exact sequence of mathematical operations MUST be performed:
+
+1. **Unobfuscate the Payload**: The file is stored obfuscated from `0x0200` to `EOF`. You must apply a bitwise `NOT` (`~byte`) to all bytes in this range to read or edit the data.
+2. **Modify the Strings (Strict Padding)**:
+   * **Name**: Max 12 characters. Must be padded with spaces (`0x20`) up to exactly 12 bytes, followed by 4 `NULL` bytes (`0x00`).
+   * **Description**: Max 32 characters. Must be padded with spaces (`0x20`) up to exactly 32 bytes. NEVER use null bytes.
+   * **Block A and B**: You must modify the strings in **both** Block A (offset `0x0208`) and Block B (offset `0x4208`), as well as the Description in both blocks (offset `0x03DC` and `0x43DC`).
+3. **Recalculate Block Checksums**:
+   * For Block A: Calculate `sum(DWORDs from 0x0204 to 0x41FC)` and `XOR` it with `0xEF94B156`. Write this back to `pre_a` (`0x0200`).
+   * For Block B: Calculate `sum(DWORDs from 0x4204 to 0x81FC)` and `XOR` it with `0xEF94B156`. Write this back to Block B's `pre_a` (`0x4200`).
+4. **Recalculate Master File ID**: Calculate the sum of all `DWORD`s from `0x0004` to `EOF` (using the *unobfuscated* data, including the newly calculated Block Checksums). `XOR` this sum with `0x29A7FE19`. Write this to the very beginning of the file (`0x0000`).
+5. **Re-obfuscate the Payload**: Apply the bitwise `NOT` to all bytes from `0x0200` to `EOF` to lock the file back into its encrypted state for the hardware.
