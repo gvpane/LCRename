@@ -59,14 +59,32 @@ def rename_replica(in_file, out_file, new_name, new_desc=None):
         if new_desc:
             data[0x43DC:0x43DC+32] = desc_bytes
             
+    # 3. Recalculate Block Checksums (pre_a)
+    BLOCK_MAGIC = 0xEF94B156
+    
+    # Block A
+    num_dwords_a = (0x4200 - 0x204) // 4
+    words_a = struct.unpack(f'<{num_dwords_a}I', data[0x204:0x4200])
+    sum_a = sum(words_a) & 0xFFFFFFFF
+    pre_a = sum_a ^ BLOCK_MAGIC
+    data[0x0200:0x0204] = struct.pack('<I', pre_a)
+    
+    # Block B (if exists)
+    if len(data) >= 0x8200:
+        num_dwords_b = (0x8200 - 0x4204) // 4
+        words_b = struct.unpack(f'<{num_dwords_b}I', data[0x4204:0x8200])
+        sum_b = sum(words_b) & 0xFFFFFFFF
+        pre_b = sum_b ^ BLOCK_MAGIC
+        data[0x4200:0x4204] = struct.pack('<I', pre_b)
+            
     print(f"    New Name: {new_name}")
     if new_desc:
         print(f"    New Desc: {new_desc}")
 
-    # 3. Re-obfuscate payload
+    # 4. Re-obfuscate payload
     obfuscate(data)
     
-    # 4. Calculate new Checksum/File ID
+    # 5. Calculate new Checksum/File ID
     new_checksum = calculate_checksum(data)
     
     # 5. Overwrite the first 4 bytes (File ID)
