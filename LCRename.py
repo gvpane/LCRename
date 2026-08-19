@@ -97,12 +97,28 @@ def rename_replica(in_file, out_file, new_name, new_desc=None):
         
     print(f"[*] Saved to {out_file} (New ID: 0x{new_checksum:08X})\n")
 
+def read_replica(in_file):
+    with open(in_file, 'rb') as f:
+        data = bytearray(f.read())
+        
+    print(f"[*] Reading {in_file}...")
+    
+    # Unobfuscate payload to reveal the headers
+    unobfuscate(data)
+    
+    # Extract existing names
+    old_name = data[0x0208:0x0218].split(b'\x00')[0].decode('utf-8', errors='ignore').strip()
+    old_desc = data[0x03DC:0x03FC].split(b'\x00')[0].decode('utf-8', errors='ignore').strip()
+    print(f"    Name: {old_name}")
+    print(f"    Description: {old_desc}")
+
 def main():
-    parser = argparse.ArgumentParser(description="Rename Focusrite Liquid Channel Replica (.lqm/.lqc) files.")
+    parser = argparse.ArgumentParser(description="Read or Rename Focusrite Liquid Channel Replica (.lqm/.lqc) files.")
     parser.add_argument('input', help="Input replica file")
-    parser.add_argument('output', help="Output replica file")
-    parser.add_argument('-n', '--name', required=True, help="New display name (max 12 chars, space-padded)")
+    parser.add_argument('output', nargs='?', help="Output replica file (required for renaming)")
+    parser.add_argument('-n', '--name', help="New display name (max 12 chars, space-padded)")
     parser.add_argument('-d', '--desc', help="New description (max 32 chars, space-padded)")
+    parser.add_argument('-r', '--read', action='store_true', help="Read and display current name and description without modifying")
     
     args = parser.parse_args()
     
@@ -110,7 +126,14 @@ def main():
         print(f"Error: File {args.input} does not exist.")
         sys.exit(1)
         
-    rename_replica(args.input, args.output, args.name, args.desc)
+    if args.read:
+        read_replica(args.input)
+    else:
+        if not args.output or not args.name:
+            print("Error: For renaming, both 'output' and '--name' arguments are required.")
+            parser.print_help()
+            sys.exit(1)
+        rename_replica(args.input, args.output, args.name, args.desc)
 
 if __name__ == '__main__':
     main()

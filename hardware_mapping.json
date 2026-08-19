@@ -1,0 +1,910 @@
+{
+    "TRANY C": {
+        "display_name": "US CLASSIC DISCRETE 1C",
+        "hardware": "API 2500*stereo mastering compressor, (US) serial #0016 (Old/Normal/Hard settings.)"
+    },
+    "US CLASSIC DISCRETE 1C": {
+        "short_name": "TRANY C",
+        "hardware": "API 2500*stereo mastering compressor, (US) serial #0016 (Old/Normal/Hard settings.)"
+    },
+    "TRANY A": {
+        "display_name": "US CLASSIC DISCRETE 1A",
+        "hardware": "API 2500*stereo mastering compressor (US) serial #0016 (Old/Normal/Soft settings.)"
+    },
+    "US CLASSIC DISCRETE 1A": {
+        "short_name": "TRANY A",
+        "hardware": "API 2500*stereo mastering compressor (US) serial #0016 (Old/Normal/Soft settings.)"
+    },
+    "SILVER 2": {
+        "display_name": "US MODERN TUBE 1",
+        "hardware": "AVALON VT-737SP* valve channel strip (US) serial # 12545"
+    },
+    "US MODERN TUBE 1": {
+        "short_name": "SILVER 2",
+        "hardware": "AVALON VT-737SP* valve channel strip (US) serial # 12545"
+    },
+    "LIVE SOUND": {
+        "display_name": "BRIT LIVE SOUND 1",
+        "hardware": "BSS DPR402* dual compressor/limiter (UK) serial #02-9983-B"
+    },
+    "BRIT LIVE SOUND 1": {
+        "short_name": "LIVE SOUND",
+        "hardware": "BSS DPR402* dual compressor/limiter (UK) serial #02-9983-B"
+    },
+    "LONDON": {
+        "display_name": "BRIT BOUTIQUE TUBE 1",
+        "hardware": "CHISWICK REACH* (UK) stereo valve compressor serial #RMS0061"
+    },
+    "BRIT BOUTIQUE TUBE 1": {
+        "short_name": "LONDON",
+        "hardware": "CHISWICK REACH* (UK) stereo valve compressor serial #RMS0061"
+    },
+    "WASP 2": {
+        "display_name": "BRIT CLASSIC SOLID STATE 1",
+        "hardware": "DRAWMER DL221X* (UK) serial #1008X"
+    },
+    "BRIT CLASSIC SOLID STATE 1": {
+        "short_name": "WASP 2",
+        "hardware": "DRAWMER DL221X* (UK) serial #1008X"
+    },
+    "WASP 1": {
+        "display_name": "BRIT CLASSIC TUBE 1",
+        "hardware": "DRAWMER 1960*(UK) vacuum tube compressor amplifier serial #1002"
+    },
+    "BRIT CLASSIC TUBE 1": {
+        "short_name": "dual mic-pre. (US) serial # FN97BD-10029\n\u2022 WASP 1",
+        "hardware": "DRAWMER 1960* vacuum tube compressor amplifier (UK) serial # 1002"
+    },
+    "BIG BLUE A": {
+        "display_name": "US MODERN SOLID STATE 1A",
+        "hardware": "dbx 160S* (US) compressor/limiter serial # 000004 (Standard compression setting.)"
+    },
+    "US MODERN SOLID STATE 1A": {
+        "short_name": "BIG BLUE A",
+        "hardware": "dbx 160S* (US) compressor/limiter serial # 000004 (Standard compression setting.)"
+    },
+    "BIG BLUE B": {
+        "display_name": "US MODERN SOLID STATE 1B",
+        "hardware": "dbx 160S* (US) compressor/limiter serial # 000004 (OverEasy compression setting.)"
+    },
+    "US MODERN SOLID STATE 1B": {
+        "short_name": "BIG BLUE B",
+        "hardware": "dbx 160S* (US) compressor/limiter serial # 000004 (OverEasy compression setting.)"
+    },
+    "US RADIO": {
+        "display_name": "US CLASSIC SOLID STATE 1",
+        "hardware": "dbx 165* compressor/limiter (US) serial # 1821"
+    },
+    "US CLASSIC SOLID STATE 1": {
+        "short_name": "STELLAR 1",
+        "hardware": "UNIVERSAL AUDIO 1176LN* mono limiting amplifier, (US) serial # 1394 (Black face,"
+    },
+    "COPY CAT": {
+        "display_name": "US MODERN COPY CAT",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* (US) serial # 1689"
+    },
+    "US MODERN COPY CAT": {
+        "short_name": "COPY CAT",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* (US) serial # 1689"
+    },
+    "VINTAGE": {
+        "display_name": "US VINTAGE TUBE 1",
+        "hardware": "FAIRCHILD MODEL 670* (US) serial # 530"
+    },
+    "US VINTAGE TUBE 1": {
+        "short_name": "VINTAGE",
+        "hardware": "FAIRCHILD MODEL 670* (US) serial # 530"
+    },
+    "FF ISA 130": {
+        "display_name": "FOCUSRITE CLASSIC ISA 130",
+        "hardware": "FOCUSRITE ISA 130 (UK) serial # F00069T"
+    },
+    "FOCUSRITE CLASSIC ISA 130": {
+        "short_name": "FF ISA 130",
+        "hardware": "FOCUSRITE ISA 130 (UK) serial # F00069T"
+    },
+    "FF GREEN 5": {
+        "display_name": "FOCUSRITE GREEN CHANNEL STRIP",
+        "hardware": "FOCUSRITE GREEN 5 CHANNEL STRIP (UK) serial # GO05116"
+    },
+    "FOCUSRITE GREEN CHANNEL STRIP": {
+        "short_name": "FF GREEN 5",
+        "hardware": "FOCUSRITE GREEN 5 CHANNEL STRIP (UK) serial # GO05116"
+    },
+    "FF RED 7": {
+        "display_name": "FOCUSRITE CLASSIC RED 7",
+        "hardware": "FOCUSRITE RED 7 (UK) serial # FO6350T"
+    },
+    "FOCUSRITE CLASSIC RED 7": {
+        "short_name": "FF RED 7",
+        "hardware": "FOCUSRITE RED 7 (UK) serial # FO6350T"
+    },
+    "DUNK A": {
+        "display_name": "US MODERN FET 1",
+        "hardware": "MANLEY SLAM!* (US) serial # SLAM120 (FET limiter)"
+    },
+    "US MODERN FET 1": {
+        "short_name": "DUNK A",
+        "hardware": "MANLEY SLAM!* (US) serial # SLAM120 (FET limiter)"
+    },
+    "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\n*DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nC O M P R E S S O R S\nThe 40 Original Factory Emulations\n\u2022 DUNK B": {
+        "display_name": "US MODERN OPTICAL 1",
+        "hardware": "MANLEY SLAM!* (US) serial # SLAM120 (ELOP (opto) limiter)"
+    },
+    "US MODERN OPTICAL 1": {
+        "short_name": "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\n*DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nC O M P R E S S O R S\nThe 40 Original Factory Emulations\n\u2022 DUNK B",
+        "hardware": "MANLEY SLAM!* (US) serial # SLAM120 (ELOP (opto) limiter)"
+    },
+    "PRIMITIVE": {
+        "display_name": "US CLASSIC TUBE 2",
+        "hardware": "MANLEY STEREO \u201cVARIABLE MU\u201d* (US) serial # MSLC61536"
+    },
+    "US CLASSIC TUBE 2": {
+        "short_name": "PRIMITIVE",
+        "hardware": "MANLEY STEREO \u201cVARIABLE MU\u201d* (US) serial # MSLC61536"
+    },
+    "BIG GREEN": {
+        "display_name": "BRIT CLASSIC OPTICAL",
+        "hardware": "JOE MEEK SC2* COMPRESSOR* (UK) serial # 05-1038"
+    },
+    "BRIT CLASSIC OPTICAL": {
+        "short_name": "BIG GREEN",
+        "hardware": "JOE MEEK SC2* COMPRESSOR* (UK) serial # 05-1038"
+    },
+    "NEW AGE 2E": {
+        "display_name": "US MODERN HYBRID 2E",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip solid state setting (US) Serial # 0-161."
+    },
+    "US MODERN HYBRID 2E": {
+        "short_name": "NEW AGE 2E",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip solid state setting (US) Serial # 0-161."
+    },
+    "NEW AGE 2A": {
+        "display_name": "US MODERN HYBRID 2A",
+        "hardware": "Millennia STT-1, set to vacuum tube topology with no transformer. (US) serial # 0-161"
+    },
+    "US MODERN HYBRID 2A": {
+        "short_name": "NEW AGE 2A",
+        "hardware": "Millennia STT-1, set to vacuum tube topology with no transformer. (US) serial # 0-161"
+    },
+    "CLASS A 1": {
+        "display_name": "BRIT 70'S CLASS A 1",
+        "hardware": "NEVE 33114* mono mic-pre./EQ (UK) serial # unknown"
+    },
+    "BRIT 70'S CLASS A 1": {
+        "short_name": "CLASS A 1",
+        "hardware": "NEVE 33114* mono mic-pre./EQ (UK) serial # unknown"
+    },
+    "CLASS A 2": {
+        "display_name": "BRIT 70'S CLASS A 2",
+        "hardware": "NEVE 33609/B* dual/stereo compressor /limiter (UK) serial # 108"
+    },
+    "BRIT 70'S CLASS A 2": {
+        "short_name": "CLASS A 2",
+        "hardware": "NEVE 33609/B* dual/stereo compressor /limiter (UK) serial # 108"
+    },
+    "BRIT DESK1": {
+        "display_name": "BRIT CLASSIC DESK 1",
+        "hardware": "NEVE VR CONSOLE* mic-pre. (UK) serial # unknown."
+    },
+    "BRIT CLASSIC DESK 1": {
+        "short_name": "BRIT DESK1",
+        "hardware": "NEVE VR CONSOLE* mic-pre. (UK) serial # unknown."
+    },
+    "MEAT PIE": {
+        "display_name": "BRIT 60'S CLASS A",
+        "hardware": "PYE 84 4060/01* compressor/limiter (UK) serial # 60"
+    },
+    "BRIT 60'S CLASS A": {
+        "short_name": "MEAT PIE",
+        "hardware": "PYE 84 4060/01* compressor/limiter (UK) serial # 60"
+    },
+    "GRINDER A": {
+        "display_name": "BRIT MODERN DESK COPY A",
+        "hardware": "SMART RESEARCH C2* bus compressor (UK) serial # C217."
+    },
+    "BRIT MODERN DESK COPY A": {
+        "short_name": "GRINDER A",
+        "hardware": "SMART RESEARCH C2* bus compressor (UK) serial # C217."
+    },
+    "GRINDER B": {
+        "display_name": "BRIT MODERN DESK COPY B",
+        "hardware": "SMART RESEARCH C2* bus compressor (UK) serial # serial # C217. (Crush setting.)"
+    },
+    "BRIT MODERN DESK COPY B": {
+        "short_name": "GRINDER B",
+        "hardware": "SMART RESEARCH C2* bus compressor (UK) serial # serial # C217. (Crush setting.)"
+    },
+    "MIX BUSS": {
+        "display_name": "BRIT CLASSIC BUSS",
+        "hardware": "SOLID STATE LOGIC FX G384* stereo compressor (UK) serial # FX384-180"
+    },
+    "BRIT CLASSIC BUSS": {
+        "short_name": "MIX BUSS",
+        "hardware": "SOLID STATE LOGIC FX G384* stereo compressor (UK) serial # FX384-180"
+    },
+    "BRIT DESK2": {
+        "display_name": "BRIT CLASSIC DESK 2",
+        "hardware": "SOLID STATE LOGIC SL 4000 G+* console compressor (UK) serial # unknown."
+    },
+    "BRIT CLASSIC DESK 2": {
+        "short_name": "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nP R E A M P S\nThe 40 Original Factory Emulations\n\u2022 BRIT DESK2",
+        "hardware": "SOLID STATE LOGIC SL 4000 G+* console mic-pre. (UK) serial # unknown"
+    },
+    "BRIT DESK3": {
+        "display_name": "BRIT MODERN DESK 1",
+        "hardware": "SOLID STATE LOGIC SL 510* (5000 series dynamics module) (UK) serial # unknown"
+    },
+    "BRIT MODERN DESK 1": {
+        "short_name": "BRIT DESK3",
+        "hardware": "SOLID STATE LOGIC SL 510* (5000 series dynamics module) (UK) serial # unknown"
+    },
+    "ACME 1": {
+        "display_name": "US MODERN TUBE 3",
+        "hardware": "SUMMIT DCL-200* dual compressor/limiter (US) serial # 0721076"
+    },
+    "US MODERN TUBE 3": {
+        "short_name": "NEW TUBE",
+        "hardware": "Peavey VMP-2* dual tube preamp (US) serial #10287934."
+    },
+    "ACME 2": {
+        "display_name": "US MODERN TUBE 4",
+        "hardware": "SUMMIT TLA-100A* tube levelling amplifier (US) serial # 0120429"
+    },
+    "US MODERN TUBE 4": {
+        "short_name": "ACME 2",
+        "hardware": "SUMMIT TLA-100A* tube levelling amplifier (US) serial # 0120429"
+    },
+    "LEVELLER": {
+        "display_name": "US CLASSIC TUBE 3",
+        "hardware": "TELETRONIX MODEL LA-2A* (US) valve compressor/limiter serial # 00227"
+    },
+    "US CLASSIC TUBE 3": {
+        "short_name": "LEVELLER",
+        "hardware": "TELETRONIX MODEL LA-2A* (US) valve compressor/limiter serial # 00227"
+    },
+    "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nC O M P R E S S O R S\nThe 40 Original Factory Emulations\n\u2022 BRIT TUBE": {
+        "display_name": "BRIT MODERN TUBE 1",
+        "hardware": "TL AUDIO C-1*dual valve compressor (UK) serial # 121739"
+    },
+    "BRIT MODERN TUBE 1": {
+        "short_name": "BRIT TUBE1",
+        "hardware": "TL AUDIO PA-1* dual pentode valve mic-pre. (UK) serial # 130318."
+    },
+    "VIKING 1": {
+        "display_name": "DANISH CLASSIC TUBE 1",
+        "hardware": "TUBE TECH MEC 1A* tube channel strip (DK) serial # 9503."
+    },
+    "DANISH CLASSIC TUBE 1": {
+        "short_name": "VIKING 1",
+        "hardware": "TUBE TECH MEC 1A* tube channel strip (DK) serial # 9503."
+    },
+    "VIKING 2": {
+        "display_name": "DANISH CLASSIC TUBE 2",
+        "hardware": "TUBE TECH LCA 2B* dual/stereo compressor/limiter (DK) serial # 04010"
+    },
+    "DANISH CLASSIC TUBE 2": {
+        "short_name": "VIKING 2",
+        "hardware": "TUBE TECH LCA 2B* dual/stereo compressor/limiter (DK) serial # 04010"
+    },
+    "STELLAR 1": {
+        "display_name": "US CLASSIC SOLID STATE 1",
+        "hardware": "UNIVERSAL AUDIO 1176LN* mono limiting amplifier, (US) serial # 1394 (Black face,"
+    },
+    "STELLAR 2": {
+        "display_name": "US CLASSIC SOLID STATE 2",
+        "hardware": "UREI MODEL 1176LN* mono limiting amplifier (US) serial # 11854 (Silver face)"
+    },
+    "US CLASSIC SOLID STATE 2": {
+        "short_name": "STELLAR 2",
+        "hardware": "UREI MODEL 1176LN* mono limiting amplifier (US) serial # 11854 (Silver face)"
+    },
+    "STELLAR 3": {
+        "display_name": "US CLASSIC SOLID STATE 3",
+        "hardware": "UREI/TELETRONIX* mono levelling amplifier LA-3A (US) serial # 1584 (Black face, 30dB"
+    },
+    "US CLASSIC SOLID STATE 3": {
+        "short_name": "STELLAR 3",
+        "hardware": "UREI/TELETRONIX* mono levelling amplifier LA-3A (US) serial # 1584 (Black face, 30dB"
+    },
+    "STELLAR 4": {
+        "display_name": "US CLASSIC OPTICAL 1",
+        "hardware": "UREI LA-4* compressor/limiter (US) serial # 4832A (Silver face)"
+    },
+    "US CLASSIC OPTICAL 1": {
+        "short_name": "STELLAR 4",
+        "hardware": "UREI LA-4* compressor/limiter (US) serial # 4832A (Silver face)"
+    },
+    "TRANY R": {
+        "display_name": "US CLASSIC DISCRETE 1R",
+        "hardware": "API 2500* stereo mastering compressor with NEW, Loud and Hard settings (US) Serial #0016"
+    },
+    "US CLASSIC DISCRETE 1R": {
+        "short_name": "TRANY R",
+        "hardware": "API 2500* stereo mastering compressor with NEW, Loud and Hard settings (US) Serial #0016"
+    },
+    "COPY CAT 2": {
+        "display_name": "US MODERN COPY CAT 2",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* with distortion 2 setting (US) Serial # 1689"
+    },
+    "US MODERN COPY CAT 2": {
+        "short_name": "COPY CAT 2",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* with distortion 2 setting (US) Serial # 1689"
+    },
+    "COPY CAT 3": {
+        "display_name": "US MODERN COPY CAT 3",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* with distortion 3 setting (US) Serial # 1689"
+    },
+    "US MODERN COPY CAT 3": {
+        "short_name": "COPY CAT 3",
+        "hardware": "EMPIRICAL LABS EL8 DISTRESSOR* with distortion 3 setting (US) Serial # 1689"
+    },
+    "NEW AGE 2B": {
+        "display_name": "US MODERN HYBRID 2B",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip (US) serial # 0-161. (Vacuum tube and"
+    },
+    "US MODERN HYBRID 2B": {
+        "short_name": "NEW AGE 2B",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip (US) serial # 0-161. (Vacuum tube and"
+    },
+    "NEW AGE 2F": {
+        "display_name": "US MODERN HYBRID 2F",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip. Solid state and transformer input setting"
+    },
+    "US MODERN HYBRID 2F": {
+        "short_name": "NEW AGE 2F",
+        "hardware": "MILLENNIA STT-1* mono mic-pre./channel strip. Solid state and transformer input setting"
+    },
+    "THE GUV": {
+        "display_name": "BRIT MODERN SOLID STATE 1",
+        "hardware": "AMEK Pure Path* dual mic-pre. amp (transformer-like amplifier) (UK) serial # unknown."
+    },
+    "BRIT MODERN SOLID STATE 1": {
+        "short_name": "THE GUV",
+        "hardware": "AMEK Pure Path* dual mic-pre. amp (transformer-like amplifier) (UK) serial # unknown."
+    },
+    "VALVE": {
+        "display_name": "US MODERN HYBRID 1",
+        "hardware": "APHEX Thermionics Model 1100* discrete Class A tube dual mic-pre. (US) serial # 1134"
+    },
+    "US MODERN HYBRID 1": {
+        "short_name": "VALVE",
+        "hardware": "APHEX Thermionics Model 1100* discrete Class A tube dual mic-pre. (US) serial # 1134"
+    },
+    "US TRANY": {
+        "display_name": "US CLASSIC DISCRETE 1",
+        "hardware": "API 3124+* discrete quad mic-pre. (US) serial # 10149"
+    },
+    "US CLASSIC DISCRETE 1": {
+        "short_name": "US TRANY",
+        "hardware": "API 3124+* discrete quad mic-pre. (US) serial # 10149"
+    },
+    "TRANY H": {
+        "display_name": "US CLASSIC DISCRETE 1 HOT",
+        "hardware": "API 3124+* discrete quad mic-pre. (US) serial #10149"
+    },
+    "US CLASSIC DISCRETE 1 HOT": {
+        "short_name": "TRANY 1 H",
+        "hardware": "API 3124+ Quad mic pre, driven hard. (US) serial # 10149"
+    },
+    "SILVER 1A": {
+        "display_name": "US MODERN DISCRETE 1 H\u00f8",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp. (US) serial # 28136(Impedance set to 'mic')"
+    },
+    "US MODERN DISCRETE 1 H\u00f8": {
+        "short_name": "SILVER 1A",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp. (US) serial # 28136(Impedance set to 'mic')"
+    },
+    "SILVER 1B": {
+        "display_name": "US MODERN DISCRETE 1 M\u00f8",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp. (US) serial # 28136(Impedance set to 'mic')"
+    },
+    "US MODERN DISCRETE 1 M\u00f8": {
+        "short_name": "SILVER 1B",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp. (US) serial # 28136(Impedance set to 'mic')"
+    },
+    "BRIT 70'S": {
+        "display_name": "BRIT CLASSIC DESK 3",
+        "hardware": "CADAC G Series 268E* console mic-pre. (UK) serial # unknown."
+    },
+    "BRIT CLASSIC DESK 3": {
+        "short_name": "BRIT 70'S",
+        "hardware": "CADAC G Series 268E* console mic-pre. (UK) serial # unknown."
+    },
+    "BIRD BRAIN": {
+        "display_name": "US MODERN SOLID STATE 1",
+        "hardware": "CRANE SONG LTD Flamingo* dual channel discrete Class A mic-pre. (US) serial # unknown."
+    },
+    "US MODERN SOLID STATE 1": {
+        "short_name": "BIRD BRAIN",
+        "hardware": "CRANE SONG LTD Flamingo* dual channel discrete Class A mic-pre. (US) serial # unknown."
+    },
+    "dual mic-pre. (US) serial # FN97BD-10029\n\u2022 WASP 1": {
+        "display_name": "BRIT CLASSIC TUBE 1",
+        "hardware": "DRAWMER 1960* vacuum tube compressor amplifier (UK) serial # 1002"
+    },
+    "SCARLET": {
+        "display_name": "US BOUTIQUE TUBE 1",
+        "hardware": "DW FEARN VT-2* dual channel vacuum mic-pre. (US) serial # 38"
+    },
+    "US BOUTIQUE TUBE 1": {
+        "short_name": "SCARLET",
+        "hardware": "DW FEARN VT-2* dual channel vacuum mic-pre. (US) serial # 38"
+    },
+    "FF ISA 110": {
+        "display_name": "FOCUSRITE CLASSIC ISA 110",
+        "hardware": "FOCUSRITE ISA 110 mono mic-pre./EQ (UK) serial # 665"
+    },
+    "FOCUSRITE CLASSIC ISA 110": {
+        "short_name": "FF ISA 110",
+        "hardware": "FOCUSRITE ISA 110 mono mic-pre./EQ (UK) serial # 665"
+    },
+    "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\n*DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nP R E A M P S\nThe 40 Original Factory Emulations\n\u2022 FF RED 1": {
+        "display_name": "FOCUSRITE CLASSIC RED 1",
+        "hardware": "FOCUSRITE RED 1 quad Class A mic-pre. (UK) serial # FO7858T"
+    },
+    "FOCUSRITE CLASSIC RED 1": {
+        "short_name": "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\n*DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nP R E A M P S\nThe 40 Original Factory Emulations\n\u2022 FF RED 1",
+        "hardware": "FOCUSRITE RED 1 quad Class A mic-pre. (UK) serial # FO7858T"
+    },
+    "BIG TUBE A": {
+        "display_name": "US BOUTIQUE TUBE 2 L\u00f8",
+        "hardware": "GROOVES TUBES VIPRE* variable impedance pre-amp. (US) serial # unknown"
+    },
+    "US BOUTIQUE TUBE 2 L\u00f8": {
+        "short_name": "BIG TUBE A",
+        "hardware": "GROOVES TUBES VIPRE* variable impedance pre-amp. (US) serial # unknown"
+    },
+    "BIG TUBE B": {
+        "display_name": "US BOUTIQUE TUBE 2 M\u00f8",
+        "hardware": "GROOVES TUBES VIPRE* variable impedance pre-amp. (US) serial # unknown"
+    },
+    "US BOUTIQUE TUBE 2 M\u00f8": {
+        "short_name": "BIG TUBE B",
+        "hardware": "GROOVES TUBES VIPRE* variable impedance pre-amp. (US) serial # unknown"
+    },
+    "SAVILLEROW": {
+        "display_name": "BRIT CLASSIC DESK 4",
+        "hardware": "HELIOS* console mic-pre./EQ (UK) serial # unknown. (Colour Green.)"
+    },
+    "BRIT CLASSIC DESK 4": {
+        "short_name": "SAVILLEROW",
+        "hardware": "HELIOS* console mic-pre./EQ (UK) serial # unknown. (Colour Green.)"
+    },
+    "DUNK": {
+        "display_name": "US MODERN TUBE 2",
+        "hardware": "MANLEY SLAM!* Transformer/valve mic-pre. (US) serial # SLAM120."
+    },
+    "US MODERN TUBE 2": {
+        "short_name": "DUNK",
+        "hardware": "MANLEY SLAM!* Transformer/valve mic-pre. (US) serial # SLAM120."
+    },
+    "NEW AGE 1": {
+        "display_name": "US MODERN DISCRETE 3",
+        "hardware": "MILLENNIA HV-3D* 8-channel mic-pre. (US) serial # D-367."
+    },
+    "US MODERN DISCRETE 3": {
+        "short_name": "NEW AGE 1",
+        "hardware": "MILLENNIA HV-3D* 8-channel mic-pre. (US) serial # D-367."
+    },
+    "CLASS A 2A": {
+        "display_name": "BRIT 70'S CLASS A 2 H\u00f8",
+        "hardware": "NEVE 1073* mono mic-pre./EQ (UK) serial # 7172K"
+    },
+    "BRIT 70'S CLASS A 2 H\u00f8": {
+        "short_name": "CLASS A 2A",
+        "hardware": "NEVE 1073* mono mic-pre./EQ (UK) serial # 7172K"
+    },
+    "CLASS A 2B": {
+        "display_name": "BRIT 70'S CLASS A 2 L\u00f8",
+        "hardware": "NEVE 1073* mono mic-pre./EQ (UK) serial # 7172K"
+    },
+    "BRIT 70'S CLASS A 2 L\u00f8": {
+        "short_name": "CLASS A 2B",
+        "hardware": "NEVE 1073* mono mic-pre./EQ (UK) serial # 7172K"
+    },
+    "CLASS AB3A": {
+        "display_name": "BRIT 70'S CLASS AB 3 H\u00f8",
+        "hardware": "AMS NEVE 1081* Classic mono mic-pre./EQ (UK) serial # 50189/B"
+    },
+    "BRIT 70'S CLASS AB 3 H\u00f8": {
+        "short_name": "CLASS AB3A",
+        "hardware": "AMS NEVE 1081* Classic mono mic-pre./EQ (UK) serial # 50189/B"
+    },
+    "CLASS AB3B": {
+        "display_name": "BRIT 70'S CLASS AB 3 L\u00f8",
+        "hardware": "AMS NEVE 1081* Classic mono mic-pre./EQ (UK) ) serial # 50189/B"
+    },
+    "BRIT 70'S CLASS AB 3 L\u00f8": {
+        "short_name": "CLASS AB3B",
+        "hardware": "AMS NEVE 1081* Classic mono mic-pre./EQ (UK) ) serial # 50189/B"
+    },
+    "OLD TUBE": {
+        "display_name": "US 60'S TUBE 1",
+        "hardware": "PULTEC MB-1* fixed gain valve mic-pre. (US) serial # 6846"
+    },
+    "US 60'S TUBE 1": {
+        "short_name": "OLD TUBE",
+        "hardware": "PULTEC MB-1* fixed gain valve mic-pre. (US) serial # 6846"
+    },
+    "RE-ISSUE": {
+        "display_name": "MODERN DEUTSCH CLASSIC",
+        "hardware": "SOUNDS INCORPORATED TELEFUNKEN V72* valve mic-pre. (DE) serial # unknown"
+    },
+    "MODERN DEUTSCH CLASSIC": {
+        "short_name": "RE-ISSUE",
+        "hardware": "SOUNDS INCORPORATED TELEFUNKEN V72* valve mic-pre. (DE) serial # unknown"
+    },
+    "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\nP R E A M P S\nThe 40 Original Factory Emulations\n\u2022 BRIT DESK2": {
+        "display_name": "BRIT CLASSIC DESK 2",
+        "hardware": "SOLID STATE LOGIC SL 4000 G+* console mic-pre. (UK) serial # unknown"
+    },
+    "SWISS ROLL": {
+        "display_name": "SWISS MODERN TUBE",
+        "hardware": "STUDER D19 MicVALVE* valve mic-pre. (CH) serial # 1216. (Bass Warmth, Angel Zoom,Valve"
+    },
+    "SWISS MODERN TUBE": {
+        "short_name": "SWISS ROLE",
+        "hardware": "Studer D19 Mic Valve - a Swiss Valve pre-amp. Settings were Bass warmth, Angel Zoom,Valve"
+    },
+    "DEUTSCH 72": {
+        "display_name": "DEUTSCH 60'S TUBE 1",
+        "hardware": "TELEFUNKEN V72* valve mic-pre. (DE) serial # 2107."
+    },
+    "DEUTSCH 60'S TUBE 1": {
+        "short_name": "DEUTSCH 72",
+        "hardware": "TELEFUNKEN V72* valve mic-pre. (DE) serial # 2107."
+    },
+    "DEUTSCH 76": {
+        "display_name": "DEUTSCH 60'S TUBE 2",
+        "hardware": "TELEFUNKEN V76/80* valve mic-pre. (DE) serial # 5507. (80Hz HPF switched out.)"
+    },
+    "DEUTSCH 60'S TUBE 2": {
+        "short_name": "DEUTSCH 76",
+        "hardware": "TELEFUNKEN V76/80* valve mic-pre. (DE) serial # 5507. (80Hz HPF switched out.)"
+    },
+    "BRIT TUBE1": {
+        "display_name": "BRIT MODERN TUBE 1",
+        "hardware": "TL AUDIO PA-1* dual pentode valve mic-pre. (UK) serial # 130318."
+    },
+    "STELLAR 1A": {
+        "display_name": "US 60'S TUBE 2 H\u00f8",
+        "hardware": "UNIVERSAL AUDIO M610* mono tube pre-amp. (US) serial # 459."
+    },
+    "US 60'S TUBE 2 H\u00f8": {
+        "short_name": "STELLAR 1A",
+        "hardware": "UNIVERSAL AUDIO M610* mono tube pre-amp. (US) serial # 459."
+    },
+    "STELLAR 1B": {
+        "display_name": "US 60'S TUBE 2 L\u00f8",
+        "hardware": "UNIVERSAL AUDIO M610* mono tube pre-amp. (US) serial # 459."
+    },
+    "US 60'S TUBE 2 L\u00f8": {
+        "short_name": "STELLAR 1B",
+        "hardware": "UNIVERSAL AUDIO M610* mono tube pre-amp. (US) serial # 459."
+    },
+    "BRIT70'S H": {
+        "display_name": "BRIT CLASSIC DESK 3 HOT",
+        "hardware": "CADAC G-268-E console module, driven hard. (UK) serial # unknown"
+    },
+    "BRIT CLASSIC DESK 3 HOT": {
+        "short_name": "BRIT70'S H",
+        "hardware": "CADAC G-268-E console module, driven hard. (UK) serial # unknown"
+    },
+    "BRITDESK1H": {
+        "display_name": "BRIT CLASSIC DESK 1 HOT",
+        "hardware": "Neve VR console, driven hard. (UK) serial # unknown"
+    },
+    "BRIT CLASSIC DESK 1 HOT": {
+        "short_name": "BRITDESK1H",
+        "hardware": "Neve VR console, driven hard. (UK) serial # unknown"
+    },
+    "BRITDESK2H": {
+        "display_name": "BRIT CLASSIC DESK 2 HOT",
+        "hardware": "SSL SL4000+* Console Mic Preamp driven hard (UK) no serial # available"
+    },
+    "BRIT CLASSIC DESK 2 HOT": {
+        "short_name": "BRITDESK2H",
+        "hardware": "SSL SL4000+* Console Mic Preamp driven hard (UK) no serial # available"
+    },
+    "SILVER 1D": {
+        "display_name": "US MODERN DISCRETE 1 HOhm HOT",
+        "hardware": "Avalon 2022 dual mono Class A pre-amp with high impedance setting (mic) and driven hard."
+    },
+    "US MODERN DISCRETE 1 HOhm HOT": {
+        "short_name": "SILVER 1D",
+        "hardware": "Avalon 2022 dual mono Class A pre-amp with high impedance setting (mic) and driven hard."
+    },
+    "SILVER 1E": {
+        "display_name": "US MODERN DISCRETE 1 M|o HOT",
+        "hardware": "Avalon 2022* with medium impedance setting and driven hard (US) serial # 28136"
+    },
+    "US MODERN DISCRETE 1 MOhm HOT": {
+        "short_name": "SILVER 1E",
+        "hardware": "Avalon 2022 dual mono Class A pre-amp with a 600 Ohm impedance setting and driven hard."
+    },
+    "SILVER 1F": {
+        "display_name": "US MODERN DISCRETE 1 L|o HOT",
+        "hardware": "Avalon 2022* with low impedance setting and driven hard (US) serial # 28136"
+    },
+    "US MODERN DISCRETE 1 LOhm HOT": {
+        "short_name": "SILVER 1F",
+        "hardware": "Avalon 2022 dual mono Class A pre-amp with 150 Ohm impedance setting. (US) serial # 28136"
+    },
+    "SWISS ROLE": {
+        "display_name": "SWISS MODERN TUBE",
+        "hardware": "Studer D19 Mic Valve - a Swiss Valve pre-amp. Settings were Bass warmth, Angel Zoom,Valve"
+    },
+    "TRANY 1 H": {
+        "display_name": "US CLASSIC DISCRETE 1 HOT",
+        "hardware": "API 3124+ Quad mic pre, driven hard. (US) serial # 10149"
+    },
+    "CLASS A 1B": {
+        "display_name": "BRIT 70'S CLASS A 1 HOT",
+        "hardware": "Neve 33114* Mic Pre and EQ transformer-based and driven hard (UK) Serial # unknown"
+    },
+    "BRIT 70'S CLASS A 1 HOT": {
+        "short_name": "CLASS A 1B",
+        "hardware": "Neve 33114* Mic Pre and EQ transformer-based and driven hard (UK) Serial # unknown"
+    },
+    "FF RED 1 H": {
+        "display_name": "FOCUSRITE CLASSIC RED 1 HOT",
+        "hardware": "Focusrite Red 1 Four Channel Mic Pre transformer-based and driven hard  (UK)"
+    },
+    "FOCUSRITE CLASSIC RED 1 HOT": {
+        "short_name": "FF RED 1 H",
+        "hardware": "Focusrite Red 1 Four Channel Mic Pre transformer-based and driven hard  (UK)"
+    },
+    "NASHVIL H": {
+        "display_name": "BRIT CLASSIC DESK 5 HOT",
+        "hardware": "Trident MTA A Series* Dual Channel Mic Pre and EQ discrete transistor-based and driven hard"
+    },
+    "BRIT CLASSIC DESK 5 HOT": {
+        "short_name": "NASHVIL H",
+        "hardware": "Trident MTA A Series* Dual Channel Mic Pre and EQ discrete transistor-based and driven hard"
+    },
+    "SCARLET B": {
+        "display_name": "US BOUTIQUE TUBE 1B HOT",
+        "hardware": "DW Fearn VT2* Dual Channel Mic Pre Vacuum Tube design and driven hard  (US) Serial # 38"
+    },
+    "US BOUTIQUE TUBE 1B HOT": {
+        "short_name": "SCARLET B",
+        "hardware": "DW Fearn VT2* Dual Channel Mic Pre Vacuum Tube design and driven hard  (US) Serial # 38"
+    },
+    "SCARLET C": {
+        "display_name": "US BOUTIQUE TUBE 1C L|o HOT",
+        "hardware": "DW Fearn VT2* Dual Channel Mic Pre Vacuum Tube design with a low impedance and"
+    },
+    "US BOUTIQUE TUBE 1C L|o HOT": {
+        "short_name": "SCARLET C",
+        "hardware": "DW Fearn VT2* Dual Channel Mic Pre Vacuum Tube design with a low impedance and"
+    },
+    "THE GUV H": {
+        "display_name": "BRIT MODERN SOLID STATE 1 HOT",
+        "hardware": "AMEK Pure Path* dual mic-pre. transformer-like amplifier with a high input gain setting (UK)"
+    },
+    "BRIT MODERN SOLID STATE 1 HOT": {
+        "short_name": "THE GUV H",
+        "hardware": "AMEK Pure Path* dual mic-pre. transformer-like amplifier with a high input gain setting (UK)"
+    },
+    "VALVE H": {
+        "display_name": "US MODERN HYBRID 1 HOT",
+        "hardware": "APHEX Thermionics Model 1100* discrete Class A tube dual mic-pre. with a high input"
+    },
+    "US MODERN HYBRID 1 HOT": {
+        "short_name": "VALVE H",
+        "hardware": "APHEX Thermionics Model 1100* discrete Class A tube dual mic-pre. with a high input"
+    },
+    "SILVER 1C": {
+        "display_name": "US MODERN DISCRETE 1 L|O",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp Impedance set to 150 (US) Serial # 28136"
+    },
+    "US MODERN DISCRETE 1 L|O": {
+        "short_name": "SILVER 1C",
+        "hardware": "AVALON AD 2022* dual mono Class A pre-amp Impedance set to 150 (US) Serial # 28136"
+    },
+    "SILVER 2 H": {
+        "display_name": "US MODERN TUBE 1 HOT",
+        "hardware": "AVALON VT-737SP* valve channel strip with a high input gain setting (US) Serial# 12545"
+    },
+    "US MODERN TUBE 1 HOT": {
+        "short_name": "SILVER 2 H",
+        "hardware": "AVALON VT-737SP* valve channel strip with a high input gain setting (US) Serial# 12545"
+    },
+    "WASP 1 H": {
+        "display_name": "BRIT CLASSIC TUBE 1 HOT",
+        "hardware": "DRAWMER 1960* vacuum tube compressor amplifier with a high input gain setting (UK)"
+    },
+    "BRIT CLASSIC TUBE 1 HOT": {
+        "short_name": "WASP 1 H",
+        "hardware": "DRAWMER 1960* vacuum tube compressor amplifier with a high input gain setting (UK)"
+    },
+    "FF 110 HOT": {
+        "display_name": "FOCUSRITE CLASSIC ISA 110 HOT",
+        "hardware": "FOCUSRITE ISA 110 mono mic-pre./EQ with a high input gain setting (UK) Serial # 665"
+    },
+    "FOCUSRITE CLASSIC ISA 110 HOT": {
+        "short_name": "FF 110 HOT",
+        "hardware": "FOCUSRITE ISA 110 mono mic-pre./EQ with a high input gain setting (UK) Serial # 665"
+    },
+    "FF G5 HOT": {
+        "display_name": "FOCUSRITE GREEN HOT STRIP",
+        "hardware": "FOCUSRITE GREEN 5 CHANNEL STRIP with a high input gain setting (UK) Serial # GO05116"
+    },
+    "FOCUSRITE GREEN HOT STRIP": {
+        "short_name": "FF G5 HOT",
+        "hardware": "FOCUSRITE GREEN 5 CHANNEL STRIP with a high input gain setting (UK) Serial # GO05116"
+    },
+    "SAV ROW H": {
+        "display_name": "BRIT CLASSIC DESK 4 HOT",
+        "hardware": "HELIOS* console mic-pre./EQ with a high input gain setting(Colour Green) (UK)"
+    },
+    "BRIT CLASSIC DESK 4 HOT": {
+        "short_name": "SAV ROW H",
+        "hardware": "HELIOS* console mic-pre./EQ with a high input gain setting(Colour Green) (UK)"
+    },
+    "DUNK HOT": {
+        "display_name": "US MODERN TUBE 2 HOT",
+        "hardware": "MANLEY SLAM!* Transformer/valve mic-pre. with a high input gain setting (US)"
+    },
+    "US MODERN TUBE 2 HOT": {
+        "short_name": "DUNK HOT",
+        "hardware": "MANLEY SLAM!* Transformer/valve mic-pre. with a high input gain setting (US)"
+    },
+    "RE-ISSUE H": {
+        "display_name": "MODERN DEUTSCH CLASSIC HOT",
+        "hardware": "SOUNDS INCORPORATED TELEFUNKEN V72* valve mic-pre. with a high input gain setting"
+    },
+    "MODERN DEUTSCH CLASSIC HOT": {
+        "short_name": "RE-ISSUE H",
+        "hardware": "SOUNDS INCORPORATED TELEFUNKEN V72* valve mic-pre. with a high input gain setting"
+    },
+    "SWISSDRIVE": {
+        "display_name": "SWISS MODERN TUBE DRIVEN",
+        "hardware": "STUDER D19 MicVALVE* valve mic-pre. Bass Warmth, Angel Zoom CCW,Valve Drive Gain,Valve"
+    },
+    "SWISS MODERN TUBE DRIVEN": {
+        "short_name": "SWISSDRIVE",
+        "hardware": "STUDER D19 MicVALVE* valve mic-pre. Bass Warmth, Angel Zoom CCW,Valve Drive Gain,Valve"
+    },
+    "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\nP R E A M P S\nJuly 2004\n\u2022 D 76 HOT": {
+        "display_name": "DEUTSCH 60S TUBE 2 HOT",
+        "hardware": "TELEFUNKENV76/80* valve mic-pre. with a high input gain setting (GERMAN) Serial # 5507."
+    },
+    "DEUTSCH 60S TUBE 2 HOT": {
+        "short_name": "DISCLAIMER:  IMPORTANT INFORMATION: FOCUSRITE, the FF logo, LIQUID CHANNEL, and the LIQUID CHANNEL logo are trademarks of Focusrite Audio Engineering Ltd. DYNAMIC CONVOLUTION is a trademark of Sintefex Ltd. All other product names,\ntrademarks, or trade names are the names of their respective owners, which are in no way associated, connected nor affiliated with Focusrite or its LIQUID CHANNEL product and which have not endorsed Focusrite's LIQUID CHANNEL product. These other product\nnames, trademarks, and trade names are used solely to identify and describe the third party products the sonic behaviour of which was studied for the LIQUID CHANNEL product, and to accurately describe the functionality of the Liquid Channel product. The Liquid\nChannel product is an independently engineered technology which utilises the patented process of Dynamic Convolution to actually measure examples of the sonic impact of original analogue products upon an audio stream, so as to electronically emulate the\nperformance of the original product studied. The result of this process is subjective and may not be perceived by a user as producing the same effects as the original products studied.\n\nP R E A M P S\nJuly 2004\n\u2022 D 76 HOT",
+        "hardware": "TELEFUNKENV76/80* valve mic-pre. with a high input gain setting (GERMAN) Serial # 5507."
+    },
+    "D 72 HOT": {
+        "display_name": "DEUTSCH 60S TUBE 1 HOT",
+        "hardware": "TELEFUNKEN V72* valve mic-pre. with a high input gain setting (GERMAN) Serial # 2107."
+    },
+    "DEUTSCH 60S TUBE 1 HOT": {
+        "short_name": "D 72 HOT",
+        "hardware": "TELEFUNKEN V72* valve mic-pre. with a high input gain setting (GERMAN) Serial # 2107."
+    },
+    "HOTROD": {
+        "display_name": "BRIT 70'S HOTROD 1",
+        "hardware": "unique Neve 3416B* dual rackmount mic pre 'hotrodded' by Blakey Boy (UK) Serial # Unknown."
+    },
+    "BRIT 70'S HOTROD 1": {
+        "short_name": "HOTROD",
+        "hardware": "unique Neve 3416B* dual rackmount mic pre 'hotrodded' by Blakey Boy (UK) Serial # Unknown."
+    },
+    "HOTROD HOT": {
+        "display_name": "BRIT 70'S HOTROD 1 HOT",
+        "hardware": "unique Neve 3416B* dual rackmount mic pre 'hotrodded' by Blakey Boy and driven hard (UK)"
+    },
+    "BRIT 70'S HOTROD 1 HOT": {
+        "short_name": "HOTROD HOT",
+        "hardware": "unique Neve 3416B* dual rackmount mic pre 'hotrodded' by Blakey Boy and driven hard (UK)"
+    },
+    "NEW TUBE": {
+        "display_name": "US MODERN TUBE 3",
+        "hardware": "Peavey VMP-2* dual tube preamp (US) serial #10287934."
+    },
+    "NEW TUBE H": {
+        "display_name": "US MODERN TUBE 3 HOT",
+        "hardware": "Peavey VMP-2* dual tube preamp driven hard (US) Serial #10287934."
+    },
+    "US MODERN TUBE 3 HOT": {
+        "short_name": "NEW TUBE H",
+        "hardware": "Peavey VMP-2* dual tube preamp driven hard (US) Serial #10287934."
+    },
+    "NEW TUBE P": {
+        "display_name": "US MODERN TUBE 3 PAD",
+        "hardware": "Peavey VMP-2* dual tube preamp with padded input setting (US) Serial #10287934."
+    },
+    "US MODERN TUBE 3 PAD": {
+        "short_name": "NEW TUBE P",
+        "hardware": "Peavey VMP-2* dual tube preamp with padded input setting (US) Serial #10287934."
+    },
+    "console driven hard (UK) serial # Unknown.\n\u2022 VIKING 1 H": {
+        "display_name": "DANISH CLASSIC TUBE 1 HOT",
+        "hardware": "Tube Tech MEC 1A tube recording channel driven hard (DANISH) serial #9503."
+    },
+    "DANISH CLASSIC TUBE 1 HOT": {
+        "short_name": "console driven hard (UK) serial # Unknown.\n\u2022 VIKING 1 H",
+        "hardware": "Tube Tech MEC 1A tube recording channel driven hard (DANISH) serial #9503."
+    },
+    "VIKING 1 P": {
+        "display_name": "DANISH CLASSIC TUBE 1 PAD",
+        "hardware": "Tube Tech MEC 1A tube recording channel with padded input setting (DANISH) serial #9503."
+    },
+    "DANISH CLASSIC TUBE 1 PAD": {
+        "short_name": "VIKING 1 P",
+        "hardware": "Tube Tech MEC 1A tube recording channel with padded input setting (DANISH) serial #9503."
+    },
+    "BRIT TUB1H": {
+        "display_name": "BRIT MODERN TUBE 1 HOT",
+        "hardware": "TLA PA-1* dual pentode valve preamp driven hard (UK) serial #130318."
+    },
+    "BRIT MODERN TUBE 1 HOT": {
+        "short_name": "BRIT TUB1H",
+        "hardware": "TLA PA-1* dual pentode valve preamp driven hard (UK) serial #130318."
+    },
+    "TRANY P": {
+        "display_name": "US CLASSIC DISCRETE 1 PAD",
+        "hardware": "API 3124+* classic discrete quad preamp with padded input setting (US) serial #10149."
+    },
+    "US CLASSIC DISCRETE 1 PAD": {
+        "short_name": "TRANY P",
+        "hardware": "API 3124+* classic discrete quad preamp with padded input setting (US) serial #10149."
+    },
+    "BRICK": {
+        "display_name": "BRIT MODERN SOLID STATE 2",
+        "hardware": "Joe Meek Voice Channel Ver1.02* 1/2 rackmount solid state voice channel with  transformer (UK)"
+    },
+    "BRIT MODERN SOLID STATE 2": {
+        "short_name": "BRICK",
+        "hardware": "Joe Meek Voice Channel Ver1.02* 1/2 rackmount solid state voice channel with  transformer (UK)"
+    },
+    "BRICK H": {
+        "display_name": "BRIT MODERN SOLID STATE 2 HOT",
+        "hardware": "Joe Meek Voice Channel Ver1.02* 1/2 rackmount solid state voice channel with  transformer"
+    },
+    "BRIT MODERN SOLID STATE 2 HOT": {
+        "short_name": "BRICK H",
+        "hardware": "Joe Meek Voice Channel Ver1.02* 1/2 rackmount solid state voice channel with  transformer"
+    },
+    "Console with padded input setting (UK) \nno serial # available\n\u2022 SILVER 1D": {
+        "display_name": "US MODERN DISCRETE 1 H|o HOT",
+        "hardware": "Avalon 2022* with high impedance setting and driven hard (US) serial # 28136"
+    },
+    "US MODERN DISCRETE 1 H|o HOT": {
+        "short_name": "Console with padded input setting (UK) \nno serial # available\n\u2022 SILVER 1D",
+        "hardware": "Avalon 2022* with high impedance setting and driven hard (US) serial # 28136"
+    },
+    "US MODERN DISCRETE 1 M|o HOT": {
+        "short_name": "SILVER 1E",
+        "hardware": "Avalon 2022* with medium impedance setting and driven hard (US) serial # 28136"
+    },
+    "US MODERN DISCRETE 1 L|o HOT": {
+        "short_name": "SILVER 1F",
+        "hardware": "Avalon 2022* with low impedance setting and driven hard (US) serial # 28136"
+    },
+    "STELLAR 1C": {
+        "display_name": "US 60'S TUBE 2 H|o HOT",
+        "hardware": "Universal Audio M610* tube preamp with high impedance setting and driven hard (US)"
+    },
+    "US 60'S TUBE 2 H|o HOT": {
+        "short_name": "STELLAR 1C",
+        "hardware": "Universal Audio M610* tube preamp with high impedance setting and driven hard (US)"
+    },
+    "STELLAR 1D": {
+        "display_name": "US 60'S TUBE 2 L|o HOT",
+        "hardware": "Universal Audio M610* tube preamp with low impedance setting and driven hard (US)"
+    },
+    "US 60'S TUBE 2 L|o HOT": {
+        "short_name": "STELLAR 1D",
+        "hardware": "Universal Audio M610* tube preamp with low impedance setting and driven hard (US)"
+    },
+    "VALVE P": {
+        "display_name": "US MODERN HYBRID 1 PAD",
+        "hardware": "Aphex Thermionics Model 1100* discrete class A tube preamp with padded input setting (US)"
+    },
+    "US MODERN HYBRID 1 PAD": {
+        "short_name": "VALVE P",
+        "hardware": "Aphex Thermionics Model 1100* discrete class A tube preamp with padded input setting (US)"
+    }
+}
